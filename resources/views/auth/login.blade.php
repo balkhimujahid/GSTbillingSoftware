@@ -65,7 +65,9 @@
                                 <div class="form-group mb-0 text-center">
                                     <button class="btn btn-primary btn-block" type="submit"> Log In </button>
                                 </div>
-                                <a href="{{ route('register') }}" class="float-right mt-2 font-15">Sign Up ?</a>
+                                @if (isset($data->password))
+                                <a href="{{ route('register')}}" class="float-right mt-2 font-15">Sign Up </a>
+                                @endif
                             </form>
                         </div> <!-- end card-body -->
                     </div>

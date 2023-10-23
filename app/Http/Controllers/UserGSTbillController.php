@@ -14,7 +14,7 @@ class UserGSTbillController extends Controller
     }
     public function ExistingClient()
     {
-        $users = DB::table('users')->where('user_type_id', '3')->get();
+        $users = DB::table('users')->where('user_type_id', '2')->get();
 
         // Get the latest invoice number
         $latestInvoice = DB::table('gstbills')->orderBy('invoice_number', 'DESC')->select('invoice_number')->first();
